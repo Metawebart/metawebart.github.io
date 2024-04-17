@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20240417130652" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20240417130652" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20240417130652">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240417130652">
+    <title>Главная страница</title>
+</head>
+
+    <body class="user-is-authorized">
+        
+        
+
+        <div class="wrapper">
+            
+            <header class="header" id="header"><div class="container">
+    <div class="header__top" id="header-top">
+        <div class="header__logo-wrapper">
+            <a href="/" class="header__logo">
+                <picture><source srcset="images/components/logo.webp" type="image/webp"><img src="images/components/logo.png" width="102" height="24" alt="Mego"></picture>
+            </a>
+            <span class="header__logo-text">Seller</span>
+        </div>
+
+        <div class="header__buttons">
+            <button class="header__button open-popup-js" data-target="#popup-choice-language-and-city">
+                <svg width="18" height="18">
+                    <use href="images/symbol/svg/sprite.symbol.svg#globe"></use>
+                </svg>
+                <span>RU</span>
+            </button>
+
+            <a class="header__button header__button_show-lg" href="#">
+                <svg width="18" height="18">
+                    <use href="images/symbol/svg/sprite.symbol.svg#learn"></use>
+                </svg>
+                <span>База знаний</span>
+            </a>
+
+            <a class="header__button header__button_show-lg" href="#">
+                <svg width="18" height="18">
+                    <use href="images/symbol/svg/sprite.symbol.svg#megaphone"></use>
+                </svg>
+                <span>Новости</span>
+            </a>
+
+            <a class="header__button is-no-authorized" href="auth.html">
+                <svg width="18" height="18">
+                    <use href="images/symbol/svg/sprite.symbol.svg#user"></use>
+                </svg>
+                <span>Войти</span>
+            </a>
+
+            <button class="is-authorized header__button header__button-user open-user-menu-js">
+                <span class="icon">
+                    <svg width="18" height="18">
+                        <use href="images/symbol/svg/sprite.symbol.svg#user"></use>
+                    </svg>
+                    <span class="counter">1</span>
+                </span>
+                <span class="header__button-user-name">Константин</span>
+            </button>
+        </div>
+    </div>
+</div>
+</header>
+
+            
+            <nav class="submenu" aria-label="Личный кабинет">
+    <div class="container">
+        <div class="submenu__inner">
+            <div class="submenu__item">
+                <a class="submenu__link" href="/">Главная</a>
+            </div>
+            <div class="active submenu__item">
+                <a class="submenu__link" href="product-list.html" data-submenu_link>Товары и цены</a>
+                <template>
+                    <div class="submenu__dropdown">
+                        <a class="active submenu__dropdown__link" href="product-list.html">Список товаров</a>
+                        <a class="submenu__dropdown__link" href="create-product_information.html">Добавить один товар</a>
+                        
+                        <a class="submenu__dropdown__link" href="upload-pricelist.html">Загрузить или обновить прайс-лист (остатки и цены)</a>
+                    </div>
+                </template>
+            </div>
+            <div class="submenu__item">
+                <a class="submenu__link has-new" href="orders.html">Заказы</a>
+            </div>
+            <div class="submenu__item">
+                <a class="submenu__link" href="/">Служба поддержки</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+            <main class="page"><div class="container">
+    <div class="page-header">
+        <h1 class="page-title">Создание товара</h1>
+
+        <div class="page-header__actions">
+            <a class="btn btn_link" href="#" target="_blank">
+                <svg width="18" height="18" aria-hidden="true">
+                    <use href="images/symbol/svg/sprite.symbol.svg#learn"></use>
+                </svg>
+                Как создать товар?
+            </a>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="step-navigation">
+            <div class="badge badge_lg badge_success">
+                <span class="badge__counter">1</span>
+                Информация о товаре
+            </div>
+            <div class="step-navigation__hr"></div>
+            <div class="badge badge_lg badge_gray">
+                <span class="badge__counter">2</span>
+                Характеристики товара
+            </div>
+            <div class="step-navigation__hr"></div>
+            <div class="badge badge_lg badge_gray">
+                <span class="badge__counter">3</span>
+                Медиа
+            </div>
+            <div class="step-navigation__hr"></div>
+            <div class="badge badge_lg badge_gray">
+                <span class="badge__counter">4</span>
+                Предварительный просмотр
+            </div>
+        </div>
+
+        <div class="content-container">
+            <h2 class="h2">Информация о товаре</h2>
+            <form class="form-valid-js" action="">
+                <div class="input">
+                    <div class="input__inner">
+                        <div class="input__label">
+                            Категория товара <span class="input__required-mark">*</span>
+                            <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                </svg>
+                            </button>
+                            <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#compare-2"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="open-popup-js input__select input__select_fake" type="button" data-target="#product-category-select">
+                            <span class="input__select__value" data-category_select_value></span>
+                            <svg class="input__select__ico" width="18" height="18" aria-hidden="true">
+                                <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                            </svg>
+                        </button>
+                        <input class="form-input-required-js" type="hidden" name="category" data-category_input_value>
+                    </div>
+                    <span class="error-empty error-text">Это обязательное поле</span>
+                </div>
+
+                <div class="popup popup_md" id="product-category-select">
+                    <div class="popup-bg popup-bg-js"></div>
+                    <div class="inner">
+                        <div class="popup__header">
+                            <div class="title">Категория товара</div>
+                        </div>
+
+                        <div class="input input_combo">
+                            <label class="input__inner">
+                                <button class="btn btn_ico" type="button">
+                                    <svg width="18" height="18" aria-hidden="true">
+                                        <use href="images/symbol/svg/sprite.symbol.svg#search"></use>
+                                    </svg>
+                                </button>
+                                <input class="input__text-input" type="text" placeholder="Поиск">
+                            </label>
+                        </div>
+
+                        <div class="tree-accordion" data-accordion data-tree_accordion>
+                            
+                            <div class="tree-accordion__item" data-accordion_panel data-tree_parent>
+                                <div class="tree-accordion__header">
+                                    <button class="tree-accordion__btn" type="button" aria-label="Toggle" aria-expanded="false" data-accordion_btn>
+                                        <span class="tree-accordion__tree-lvl">
+                                            <svg width="18" height="18" aria-hidden="true">
+                                                <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="tree-accordion__title" data-category_sibling>Автотовары</span>
+                                    </button>
+                                </div>
+                                <div class="accordion-content tree-accordion__content" aria-hidden="true" data-accordion_content>
+                                    <div>
+                                        
+                                        <div class="tree-accordion__item" data-accordion_panel>
+                                            <div class="tree-accordion__header">
+                                                <button class="tree-accordion__btn" type="button" aria-label="Toggle" aria-expanded="false" data-accordion_btn>
+                                                    <span class="tree-accordion__tree-lvl">
+                                                        <svg width="18" height="18" aria-hidden="true">
+                                                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tree-accordion__title" data-category_sibling>
+                                                        Автоаксессуары и принадлежности
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="accordion-content tree-accordion__content" aria-hidden="true" data-accordion_content>
+                                                <div>
+                                                    
+                                                    <div class="tree-accordion__item" data-accordion_panel>
+                                                        <div class="tree-accordion__header">
+                                                            <input class="tree-accordion__radio" type="radio" id="category-1-1" name="category" data-category_input>
+                                                            <label class="tree-accordion__btn tree-accordion__btn_checkbox" for="category-1-1">
+                                                                <span class="tree-accordion__tree-lvl">
+                                                                    <svg width="18" height="18" aria-hidden="true">
+                                                                        <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="tree-accordion__title" data-category_title data-category_sibling>
+                                                                    Держатель автомобильный
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tree-accordion__item" data-accordion_panel>
+                                                        <div class="tree-accordion__header">
+                                                            <input class="tree-accordion__radio" type="radio" id="category-1-2" name="category" data-category_input>
+                                                            <label class="tree-accordion__btn tree-accordion__btn_checkbox" for="category-1-2">
+                                                                <span class="tree-accordion__tree-lvl">
+                                                                    <svg width="18" height="18" aria-hidden="true">
+                                                                        <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="tree-accordion__title" data-category_title data-category_sibling>
+                                                                    Category
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        
+                                        <div class="tree-accordion__item" data-accordion_panel>
+                                            <div class="tree-accordion__header">
+                                                <button class="tree-accordion__btn" type="button" aria-label="Toggle" aria-expanded="false" data-accordion_btn>
+                                                    <span class="tree-accordion__tree-lvl">
+                                                        <svg width="18" height="18" aria-hidden="true">
+                                                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tree-accordion__title" data-category_sibling>
+                                                        Автоаксессуары и принадлежности
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="accordion-content tree-accordion__content" aria-hidden="true" data-accordion_content>
+                                                <div>
+                                                    
+                                                    <div class="tree-accordion__item" data-accordion_panel>
+                                                        <div class="tree-accordion__header">
+                                                            <input class="tree-accordion__radio" type="radio" id="category-1-3" name="category" data-category_input>
+                                                            <label class="tree-accordion__btn tree-accordion__btn_checkbox" for="category-1-3">
+                                                                <span class="tree-accordion__tree-lvl">
+                                                                    <svg width="18" height="18" aria-hidden="true">
+                                                                        <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="tree-accordion__title" data-category_title data-category_sibling>
+                                                                    Держатель автомобильный
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tree-accordion__item" data-accordion_panel>
+                                                        <div class="tree-accordion__header">
+                                                            <input class="tree-accordion__radio" type="radio" id="category-1-4" name="category" data-category_input>
+                                                            <label class="tree-accordion__btn tree-accordion__btn_checkbox" for="category-1-4">
+                                                                <span class="tree-accordion__tree-lvl">
+                                                                    <svg width="18" height="18" aria-hidden="true">
+                                                                        <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="tree-accordion__title" data-category_title data-category_sibling>
+                                                                    Category
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="tree-accordion__item" data-accordion_panel data-tree_parent>
+                                <div class="tree-accordion__header">
+                                    <button class="tree-accordion__btn" type="button" aria-label="Toggle" aria-expanded="false" data-accordion_btn>
+                                        <span class="tree-accordion__tree-lvl">
+                                            <svg width="18" height="18" aria-hidden="true">
+                                                <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="tree-accordion__title" data-category_sibling>Автотовары</span>
+                                    </button>
+                                </div>
+                                <div class="accordion-content tree-accordion__content" aria-hidden="true" data-accordion_content>
+                                    <div>
+                                        
+                                        <div class="tree-accordion__item" data-accordion_panel>
+                                            <div class="tree-accordion__header">
+                                                <input class="tree-accordion__radio" type="radio" id="category-3-1" name="category" data-category_input>
+                                                <label class="tree-accordion__btn tree-accordion__btn_checkbox" for="category-3-1">
+                                                    <span class="tree-accordion__tree-lvl">
+                                                        <svg width="18" height="18" aria-hidden="true">
+                                                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tree-accordion__title" data-category_title data-category_sibling>
+                                                        Держатель автомобильный
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="tree-accordion__item" data-accordion_panel>
+                                            <div class="tree-accordion__header">
+                                                <input class="tree-accordion__radio" type="radio" id="category-3-2" name="category" data-category_input>
+                                                <label class="tree-accordion__btn tree-accordion__btn_checkbox" for="category-3-2">
+                                                    <span class="tree-accordion__tree-lvl">
+                                                        <svg width="18" height="18" aria-hidden="true">
+                                                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tree-accordion__title" data-category_title data-category_sibling>
+                                                        Category
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="tree-accordion__item" data-accordion_panel data-tree_parent>
+                                <div class="tree-accordion__header">
+                                    <button class="tree-accordion__btn" type="button" aria-label="Toggle" aria-expanded="false" data-accordion_btn>
+                                        <span class="tree-accordion__tree-lvl">
+                                            <svg width="18" height="18" aria-hidden="true">
+                                                <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="tree-accordion__title" data-category_sibling>Автотовары</span>
+                                    </button>
+                                </div>
+                                <div class="accordion-content tree-accordion__content" aria-hidden="true" data-accordion_content>
+                                    <div>
+                                        
+                                        <div class="tree-accordion__item" data-accordion_panel>
+                                            <div class="tree-accordion__header">
+                                                <button class="tree-accordion__btn" type="button" aria-label="Toggle" aria-expanded="false" data-accordion_btn>
+                                                    <span class="tree-accordion__tree-lvl">
+                                                        <svg width="18" height="18" aria-hidden="true">
+                                                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="tree-accordion__title" data-category_sibling>
+                                                        Автоаксессуары и принадлежности
+                                                    </span>
+                                                </button>
+                                            </div>
+                                            <div class="accordion-content tree-accordion__content" aria-hidden="true" data-accordion_content>
+                                                <div>
+                                                    
+                                                    <div class="tree-accordion__item" data-accordion_panel>
+                                                        <div class="tree-accordion__header">
+                                                            <input class="tree-accordion__radio" type="radio" id="category-2-1" name="category" data-category_input>
+                                                            <label class="tree-accordion__btn tree-accordion__btn_checkbox" for="category-2-1">
+                                                                <span class="tree-accordion__tree-lvl">
+                                                                    <svg width="18" height="18" aria-hidden="true">
+                                                                        <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="tree-accordion__title" data-category_title data-category_sibling>
+                                                                    Держатель автомобильный
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tree-accordion__item" data-accordion_panel>
+                                                        <div class="tree-accordion__header">
+                                                            <input class="tree-accordion__radio" type="radio" id="category-2-2" name="category" data-category_input>
+                                                            <label class="tree-accordion__btn tree-accordion__btn_checkbox" for="category-2-2">
+                                                                <span class="tree-accordion__tree-lvl">
+                                                                    <svg width="18" height="18" aria-hidden="true">
+                                                                        <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                                                    </svg>
+                                                                </span>
+                                                                <span class="tree-accordion__title" data-category_title data-category_sibling>
+                                                                    Category
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            
+                            <div class="tree-accordion__item" data-accordion_panel data-tree_parent>
+                                <div class="tree-accordion__header">
+                                    <input class="tree-accordion__radio" type="radio" id="category-4-1" name="category" data-category_input>
+                                    <label class="tree-accordion__btn tree-accordion__btn_checkbox" for="category-4-1">
+                                        <span class="tree-accordion__tree-lvl">
+                                            <svg width="18" height="18" aria-hidden="true">
+                                                <use href="images/symbol/svg/sprite.symbol.svg#chevron-right"></use>
+                                            </svg>
+                                        </span>
+                                        <span class="tree-accordion__title" data-category_title data-category_sibling>
+                                            Держатель автомобильный
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <ul class="breadcrumbs tree-accordion-breadcrumbs" data-categories_tree></ul>
+
+                        <div class="popup__footer">
+                            <button class="btn btn-green close-popup-js" type="button">Подтвердить</button>
+                        </div>
+
+                        <button class="close-popup-js close-popup" aria-label="Закрыть" type="button">
+                            <svg width="18" height="18">
+                                <use href="images/symbol/svg/sprite.symbol.svg#close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input">
+                        <div class="input__inner">
+                            <div class="input__label">
+                                Тип товара
+                                <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                    <svg width="18" height="18" aria-hidden="true">
+                                        <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                    </svg>
+                                </button>
+                                <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                    <svg width="18" height="18" aria-hidden="true">
+                                        <use href="images/symbol/svg/sprite.symbol.svg#compare-2"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <select data-select_type data-theme="basic" data-width="100%">
+                                <option value="">Выберите тип товара</option>
+                                <option value="2">option 2</option>
+                                <option value="3">option 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn open-popup-js" type="button" data-target="#add-type">
+                        <svg width="18" height="18" aria-hidden="true">
+                            <use href="images/symbol/svg/sprite.symbol.svg#plus"></use>
+                        </svg>
+                        Добавить новый
+                    </button>
+                </div>
+
+                <div class="popup" id="add-type">
+                    <div class="popup-bg popup-bg-js"></div>
+                    <div class="inner">
+                        <div class="popup__header">
+                            <div class="title">Новый тип товара</div>
+                        </div>
+
+                        <div class="input">
+                            <div class="input__inner">
+                                <label class="input__label" for="type-name">
+                                    Название <span class="input__required-mark">*</span>
+                                    <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                        <svg width="18" height="18" aria-hidden="true">
+                                            <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                </label>
+                                <input class="input__text-input form-input-required-js" id="type-name" type="text">
+                            </div>
+                            <span class="error-empty error-text">Это обязательное поле</span>
+                        </div>
+
+                        <div class="popup__footer">
+                            <button class="btn btn-green" type="button" data-add_type_btn>Добавить</button>
+                        </div>
+
+                        <button class="close-popup-js close-popup" aria-label="Закрыть" type="button">
+                            <svg width="18" height="18">
+                                <use href="images/symbol/svg/sprite.symbol.svg#close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="input">
+                    <div class="input__inner">
+                        <label class="input__label" for="title-ro">
+                            Название <span class="input__required-mark">*</span>
+                            <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <input class="input__text-input form-input-required-js" id="title-ro" type="text">
+                    </div>
+                    <span class="error-empty error-text">Это обязательное поле</span>
+                </div>
+
+                <div class="input">
+                    <div class="input__inner">
+                        <label class="input__label" for="barcode">
+                            Штрихкод
+                            <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <input class="input__text-input" id="barcode" type="text">
+                    </div>
+                </div>
+
+                <div class="input">
+                    <div class="input__inner">
+                        <label class="input__label" for="articul">
+                            Артикул
+                            <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <input class="input__text-input" id="articul" type="text">
+                    </div>
+                </div>
+
+                <div class="input">
+                    <div class="input__inner">
+                        <label class="input__label" for="mego-price">
+                            Цена продажи на Мего
+                            <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <input class="input__text-input" id="mego-price" type="number">
+                    </div>
+                </div>
+
+                <div class="input">
+                    <div class="input__inner">
+                        <label class="input__label" for="promo-price">
+                            Цена промо
+                            <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <input class="input__text-input" id="promo-price" type="number">
+                    </div>
+                </div>
+
+                <div class="input">
+                    <div class="input__inner">
+                        <div class="input__label">
+                            НДС
+                            <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="input__options-group">
+                            <input class="input__radio" type="radio" id="nds-20" name="nds">
+                            <label class="input__radio-label input__radio-label_md" for="nds-20">20%</label>
+
+                            <input class="input__radio" type="radio" id="nds-10" name="nds">
+                            <label class="input__radio-label input__radio-label_md" for="nds-10">12%</label>
+
+                            <input class="input__radio" type="radio" id="nds-8" name="nds">
+                            <label class="input__radio-label input__radio-label_md" for="nds-8">8%</label>
+
+                            <input class="input__radio" type="radio" id="nds-0" name="nds">
+                            <label class="input__radio-label input__radio-label_md" for="nds-0">не облагается</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input">
+                    <div class="input__inner">
+                        <label class="input__label" for="min-items">
+                            Минимальное кол-во единиц для продажи в одном заказе
+                            <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <input class="input__text-input" id="min-items" type="number">
+                    </div>
+                </div>
+
+                <div class="input">
+                    <div class="input__inner">
+                        <label class="input__label" for="in-stock">
+                            Кол-во на моем складе, шт
+                            <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <input class="input__text-input" id="in-stock" type="number">
+                    </div>
+                </div>
+
+                <h2 class="h2">Габариты и вес</h2>
+
+                <div data-packaging>
+                    <div class="input-group-panel" data-packaging_template>
+                        <div class="input">
+                            <div class="input__inner">
+                                <label class="input__label" for="length">
+                                    Длина упаковки, мм
+                                    <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                        <svg width="18" height="18" aria-hidden="true">
+                                            <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                </label>
+                                <input class="input__text-input" id="length" type="number">
+                            </div>
+                        </div>
+
+                        <div class="input">
+                            <div class="input__inner">
+                                <label class="input__label" for="width">
+                                    Ширина упаковки, мм
+                                    <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                        <svg width="18" height="18" aria-hidden="true">
+                                            <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                </label>
+                                <input class="input__text-input" id="width" type="number">
+                            </div>
+                        </div>
+
+                        <div class="input">
+                            <div class="input__inner">
+                                <label class="input__label" for="height">
+                                    Высота упаковки, мм
+                                    <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                        <svg width="18" height="18" aria-hidden="true">
+                                            <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                </label>
+                                <input class="input__text-input" id="height" type="number">
+                            </div>
+                        </div>
+
+                        <div class="input">
+                            <div class="input__inner">
+                                <label class="input__label" for="weight">
+                                    Вес с упаковкой, г
+                                    <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                        <svg width="18" height="18" aria-hidden="true">
+                                            <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                        </svg>
+                                    </button>
+                                </label>
+                                <input class="input__text-input" id="weight" type="number">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="add-packaging">
+                    <div class="add-packaging__label">Товар из нескольких упаковок</div>
+                    <button class="btn" type="button" data-add_packaging>
+                        <svg width="18" height="18" aria-hidden="true">
+                            <use href="images/symbol/svg/sprite.symbol.svg#plus"></use>
+                        </svg>
+                        Добавить упаковку
+                    </button>
+                </div>
+
+                <div class="input">
+                    <div class="input__inner">
+                        <label class="input__label" for="warranty">
+                            Гарантийный срок, мес
+                            <button class="input__label__btn" type="button" data-tippy-content="Example tooltip" aria-label="Info">
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#info"></use>
+                                </svg>
+                            </button>
+                        </label>
+                        <input class="input__text-input" id="warranty" type="number">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn open-popup-js" type="button" data-target="#confirmation">Отмена</button>
+                    <a class="btn btn-green" href="create-product_options.html">Далее</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup popup_md" id="confirmation">
+    <div class="popup-bg popup-bg-js"></div>
+    <div class="inner">
+        <div class="popup__header">
+            <div class="title">В карточке есть несохраненные изменения</div>
+            <div class="popup__subtitle">Вы заполнили, но не сохранили информацию</div>
+        </div>
+
+        <div class="popup__footer">
+            <button class="btn close-popup-js" type="button">Вернуться</button>
+            <a class="btn btn-green" href="#">Выйти без сохранения</a>
+        </div>
+
+        <button class="close-popup-js close-popup" aria-label="Закрыть" type="button">
+            <svg width="18" height="18">
+                <use href="images/symbol/svg/sprite.symbol.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+</main>
+
+            
+            <footer class="footer"><div class="container">
+    <div class="footer__top">
+        <div class="footer__logo-wrap">
+            <a href="/" class="footer__logo">
+                <picture><source srcset="images/components/logo.webp" type="image/webp"><img src="images/components/logo.png" width="136" height="32" alt="Mego"></picture>
+            </a>
+            <span class="footer__logo-text">Seller</span>
+        </div>
+
+        <div class="footer__socials">
+            <a href="#facebook" class="facebook" target="_blank" rel="nofollow" aria-label="Facebook">
+                <svg width="24" height="25">
+                    <use href="images/symbol/svg/sprite.symbol.svg#facebook"></use>
+                </svg>
+            </a>
+
+            <a href="#instagram" class="instagram" target="_blank" rel="nofollow" aria-label="Instagram">
+                <svg width="24" height="25">
+                    <use href="images/symbol/svg/sprite.symbol.svg#instagram"></use>
+                </svg>
+            </a>
+
+            <a href="#youtube" class="youtube" target="_blank" rel="nofollow" aria-label="Youtube">
+                <svg width="24" height="25">
+                    <use href="images/symbol/svg/sprite.symbol.svg#youtube"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="footer__wrap-menu-copyright">
+            <div class="footer__menu">
+                <div class="footer__menu-item">
+                    <h3 class="active footer-menu-header-js footer__menu-header">
+                        Компания
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li>
+                                <a href="#">Стать курьером</a>
+                            </li>
+                            <li>
+                                <a href="#">Реквизиты</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#">Мобильное приложение</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Продавцам
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Стать продавцом</a>
+                            </li>
+                            <li>
+                                <a href="#">Стать поставщиком</a>
+                            </li>
+                            <li>
+                                <a href="#">Документация для партнёров</a>
+                            </li>
+                            <li>
+                                <a href="#">Партнёрская программа</a>
+                            </li>
+                            <li>
+                                <a href="#">Производителям</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Компаниям
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Добавить компанию</a>
+                            </li>
+                            <li>
+                                <a href="#">Мои компании</a>
+                            </li>
+                            <li>
+                                <a href="#">Подарочные сертификаты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Помощь
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Как выбрать товар</a>
+                            </li>
+                            <li>
+                                <a href="#">Оплата и доставка</a>
+                            </li>
+                            <li>
+                                <a href="#">Обратная связь</a>
+                            </li>
+                            <li>
+                                <a href="#">Возвраты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Помощь
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Как выбрать товар</a>
+                            </li>
+                            <li>
+                                <a href="#">Оплата и доставка</a>
+                            </li>
+                            <li>
+                                <a href="#">Обратная связь</a>
+                            </li>
+                            <li>
+                                <a href="#">Возвраты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <a href="#">&copy; 2023 «mego»</a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+
+            
+<div class="notification" id="notification">
+    <div class="notification__inner">
+        <span class="notification__text">Товар добавлен в корзину</span>
+
+        <button class="notification__close" id="notification-close" aria-label="Закрыть уведомление">
+            <svg width="18" height="18">
+                <use href="images/symbol/svg/sprite.symbol.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+
+<div class="fixed-menu">
+    <div class="container">
+        <ul>
+            <li>
+                <a href="/" class="active">
+                    <svg width="24" height="24">
+                        <use href="images/symbol/svg/sprite.symbol.svg#home"></use>
+                    </svg>
+                    Главная
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg width="24" height="24">
+                        <use href="images/symbol/svg/sprite.symbol.svg#learn"></use>
+                    </svg>
+                    База знаний
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg width="24" height="24">
+                        <use href="images/symbol/svg/sprite.symbol.svg#megaphone"></use>
+                    </svg>
+                    Новости
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="popup popup-choice-language-and-city" id="popup-choice-language-and-city">
+    <div class="popup-bg popup-bg-js"></div>
+    <div class="inner">
+        <div class="choice-language" id="choice-language">
+            <div class="popup__header">
+                <div class="title">Язык сайта</div>
+            </div>
+
+            <ul class="list">
+                <li>
+                    <a href="#" class="active" data-code="RU">Русский</a>
+                </li>
+                <li>
+                    <a href="#" data-code="RO">Română</a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="close-popup-js close-popup" aria-label="Закрыть">
+            <svg width="18" height="18">
+                <use href="images/symbol/svg/sprite.symbol.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+
+<div class="user-menu" id="user-menu">
+    <div class="user-menu__bg" id="user-menu-bg"></div>
+
+    <div class="user-menu__inner">
+        <div class="user-menu__header">
+            <div class="title">Название компании</div>
+        </div>
+
+        <div class="user-menu__content">
+            <ul class="is-authorized user-menu__list user-menu__list-desktop">
+                <li>
+                    <a href="account-main.html">
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#sliders"></use>
+                        </svg>
+                        Настройки
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="is-authorized user-menu__list user-menu__list-mobile">
+                <li>
+                    <a href="account-main.html"> Основная информация </a>
+                </li>
+                <li>
+                    <a href="account-address.html"> Адреса, контакты, реквизиты </a>
+                </li>
+                <li>
+                    <a href="account-info.html"> Информация о магазине </a>
+                </li>
+            </ul>
+
+            <ul class="is-authorized user-menu__list user-menu__list-mobile">
+                <li>
+                    <a href="account-delivery.html"> Стоимость доставки </a>
+                </li>
+                <li>
+                    <a href="account-payment.html"> Платежи и комиссии </a>
+                </li>
+                <li>
+                    <a href="account-main.html"> Заполнение карточек товара </a>
+                </li>
+                <li>
+                    <a href="account-agreement.html"> Договор </a>
+                </li>
+            </ul>
+
+            <ul class="is-authorized user-menu__list user-menu__list-mobile">
+                <li>
+                    <a href="account-main.html"> API ключи </a>
+                </li>
+            </ul>
+
+            <ul class="is-authorized user-menu__list">
+                <li>
+                    <a href="#">
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#log-out"></use>
+                        </svg>
+                        Выход
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<button class="button-to-top" id="button-to-top" aria-label="Кнопка вверх">
+    <svg width="18" height="18">
+        <use href="images/symbol/svg/sprite.symbol.svg#arrow-up"></use>
+    </svg>
+</button>
+
+
+        </div>
+        
+        <script src="js/app.min.js?_v=20240417130652"></script>
+    </body>
+</html>

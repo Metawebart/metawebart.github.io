@@ -1,0 +1,1444 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20240417130652" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20240417130652" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20240417130652">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240417130652">
+    <title>Главная страница</title>
+</head>
+
+    <body class="user-is-authorized">
+        
+        
+
+        <div class="wrapper">
+            
+            <header class="header" id="header"><div class="container">
+    <div class="header__top" id="header-top">
+        <div class="header__logo-wrapper">
+            <a href="/" class="header__logo">
+                <picture><source srcset="images/components/logo.webp" type="image/webp"><img src="images/components/logo.png" width="102" height="24" alt="Mego"></picture>
+            </a>
+            <span class="header__logo-text">Seller</span>
+        </div>
+
+        <div class="header__buttons">
+            <button class="header__button open-popup-js" data-target="#popup-choice-language-and-city">
+                <svg width="18" height="18">
+                    <use href="images/symbol/svg/sprite.symbol.svg#globe"></use>
+                </svg>
+                <span>RU</span>
+            </button>
+
+            <a class="header__button header__button_show-lg" href="#">
+                <svg width="18" height="18">
+                    <use href="images/symbol/svg/sprite.symbol.svg#learn"></use>
+                </svg>
+                <span>База знаний</span>
+            </a>
+
+            <a class="header__button header__button_show-lg" href="#">
+                <svg width="18" height="18">
+                    <use href="images/symbol/svg/sprite.symbol.svg#megaphone"></use>
+                </svg>
+                <span>Новости</span>
+            </a>
+
+            <a class="header__button is-no-authorized" href="auth.html">
+                <svg width="18" height="18">
+                    <use href="images/symbol/svg/sprite.symbol.svg#user"></use>
+                </svg>
+                <span>Войти</span>
+            </a>
+
+            <button class="is-authorized header__button header__button-user open-user-menu-js">
+                <span class="icon">
+                    <svg width="18" height="18">
+                        <use href="images/symbol/svg/sprite.symbol.svg#user"></use>
+                    </svg>
+                    <span class="counter">1</span>
+                </span>
+                <span class="header__button-user-name">Константин</span>
+            </button>
+        </div>
+    </div>
+</div>
+</header>
+
+            
+            <nav class="submenu" aria-label="Личный кабинет">
+    <div class="container">
+        <div class="submenu__inner">
+            <div class="submenu__item">
+                <a class="submenu__link" href="/">Главная</a>
+            </div>
+            <div class="active submenu__item">
+                <a class="submenu__link" href="product-list.html" data-submenu_link>Товары и цены</a>
+                <template>
+                    <div class="submenu__dropdown">
+                        <a class="active submenu__dropdown__link" href="product-list.html">Список товаров</a>
+                        <a class="submenu__dropdown__link" href="create-product_information.html">Добавить один товар</a>
+                        
+                        <a class="submenu__dropdown__link" href="upload-pricelist.html">Загрузить или обновить прайс-лист (остатки и цены)</a>
+                    </div>
+                </template>
+            </div>
+            <div class="submenu__item">
+                <a class="submenu__link has-new" href="orders.html">Заказы</a>
+            </div>
+            <div class="submenu__item">
+                <a class="submenu__link" href="/">Служба поддержки</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+            <main class="page"><div class="container">
+    <div class="page-header">
+        <h1 class="page-title">Список товаров</h1>
+
+        <div class="page-header__actions">
+            <a class="btn" href="#"> Добавить товар </a>
+
+            
+
+            <a class="btn" href="#">Скачать xls</a>
+        </div>
+    </div>
+
+    <nav class="secondary-nav" aria-label="Товары по статусам">
+        <a class="secondary-nav__link active" href="#">
+            Все
+            <span class="secondary-nav__counter">3</span>
+        </a>
+        <a class="secondary-nav__link" href="#">
+            Не описанные
+            <span class="secondary-nav__counter secondary-nav__counter_alert">3</span>
+        </a>
+        <a class="secondary-nav__link" href="#">
+            В продаже
+            <span class="secondary-nav__counter">3</span>
+        </a>
+        <a class="secondary-nav__link" href="#">
+            На модерации
+            <span class="secondary-nav__counter">3</span>
+        </a>
+        <a class="secondary-nav__link" href="#">
+            На доработку
+            <span class="secondary-nav__counter secondary-nav__counter_alert">3</span>
+        </a>
+        <a class="secondary-nav__link" href="#">
+            Закончились
+            <span class="secondary-nav__counter">3</span>
+        </a>
+        <a class="secondary-nav__link" href="#">
+            Заблокированные
+            <span class="secondary-nav__counter">3</span>
+        </a>
+        <a class="secondary-nav__link" href="#">
+            Удаленные
+            <span class="secondary-nav__counter">3</span>
+        </a>
+    </nav>
+
+    <div class="filter">
+        <div class="filter__main-action">
+            <div class="filter-category">
+                <div class="input">
+                    <div class="input__inner">
+                        <div class="input__filter-select" data-search_filter>
+                            <div class="input__filter-select__wrapper">
+                                <button class="input__filter-select__value" type="button" data-search_filter_trigger>
+                                    <span>Категория <span data-search_filter_counter></span></span>
+                                    <span class="input__filter-select__ico">
+                                        <svg width="18" height="18" aria-hidden="true">
+                                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                            </div>
+                            <button class="input__filter-select__clear" type="button" data-search_filter_clear>
+                                <svg width="12" height="12" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#x"></use>
+                                </svg>
+                            </button>
+                            <div class="input__filter-select__menu" data-search_filter_dropdown>
+                                <div class="input__filter-select__accordion" data-accordion>
+                                    <div class="input__filter-select__accordion-item" data-accordion_panel data-search_filter_panel>
+                                        <div class="input__filter-select__accordion-header" data-search_filter_header>
+                                            <div class="input__filter-select__accordion-input">
+                                                <input class="input__filter-select__checkbox" type="checkbox" id="category-1" data-search_filter_checkbox>
+                                                <label class="input__filter-select__label" for="category-1">
+                                                    <span class="input__filter-select__check">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Автотовары
+                                                </label>
+                                            </div>
+                                            <button class="input__filter-select__accordion-btn" type="button" aria-label="Toggle" aria-expanded="false" data-accordion_btn>
+                                                <svg width="18" height="18" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="accordion-content input__filter-select__accordion-body" aria-hidden="true" data-accordion_content>
+                                            <div>
+                                                <div class="input__filter-select__accordion-item" data-accordion_panel data-search_filter_panel>
+                                                    <div class="input__filter-select__accordion-header" data-search_filter_header>
+                                                        <div class="input__filter-select__accordion-input">
+                                                            <input class="input__filter-select__checkbox" type="checkbox" id="category-1-1" data-search_filter_checkbox>
+                                                            <label class="input__filter-select__label" for="category-1-1">
+                                                                <span class="input__filter-select__check">
+                                                                    <svg width="14" height="14" aria-hidden="true">
+                                                                        <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                                    </svg>
+                                                                </span>
+                                                                Автоаксессуары и принадлежности
+                                                            </label>
+                                                        </div>
+                                                        <button class="input__filter-select__accordion-btn" type="button" aria-label="Toggle" aria-expanded="false" data-accordion_btn>
+                                                            <svg width="18" height="18" aria-hidden="true">
+                                                                <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="accordion-content input__filter-select__accordion-body" aria-hidden="true" data-accordion_content>
+                                                        <div>
+                                                            <div class="input__filter-select__accordion-item" data-accordion_panel data-search_filter_panel>
+                                                                <div class="input__filter-select__accordion-input">
+                                                                    <input class="input__filter-select__checkbox" type="checkbox" id="category-1-2" data-search_filter_checkbox>
+                                                                    <label class="input__filter-select__label" for="category-1-2">
+                                                                        <span class="input__filter-select__check">
+                                                                            <svg width="14" height="14" aria-hidden="true">
+                                                                                <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                                            </svg>
+                                                                        </span>
+                                                                        Держатель автомобильный
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="input__filter-select__accordion-item" data-accordion_panel data-search_filter_panel>
+                                                                <div class="input__filter-select__accordion-input">
+                                                                    <input class="input__filter-select__checkbox" type="checkbox" id="category-1-3" data-search_filter_checkbox>
+                                                                    <label class="input__filter-select__label" for="category-1-3">
+                                                                        <span class="input__filter-select__check">
+                                                                            <svg width="14" height="14" aria-hidden="true">
+                                                                                <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                                            </svg>
+                                                                        </span>
+                                                                        Category
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="input__filter-select__accordion-item" data-accordion_panel data-search_filter_panel>
+                                        <div class="input__filter-select__accordion-header" data-search_filter_header>
+                                            <div class="input__filter-select__accordion-input">
+                                                <input class="input__filter-select__checkbox" type="checkbox" id="category-2" data-search_filter_checkbox>
+                                                <label class="input__filter-select__label" for="category-2">
+                                                    <span class="input__filter-select__check">
+                                                        <svg width="14" height="14" aria-hidden="true">
+                                                            <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                        </svg>
+                                                    </span>
+                                                    Автотовары
+                                                </label>
+                                            </div>
+                                            <button class="input__filter-select__accordion-btn" type="button" aria-label="Toggle" aria-expanded="false" data-accordion_btn>
+                                                <svg width="18" height="18" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="accordion-content input__filter-select__accordion-body" aria-hidden="true" data-accordion_content>
+                                            <div>
+                                                <div class="input__filter-select__accordion-item" data-accordion_panel data-search_filter_panel>
+                                                    <div class="input__filter-select__accordion-header" data-search_filter_header>
+                                                        <div class="input__filter-select__accordion-input">
+                                                            <input class="input__filter-select__checkbox" type="checkbox" id="category-2-1" data-search_filter_checkbox>
+                                                            <label class="input__filter-select__label" for="category-2-1">
+                                                                <span class="input__filter-select__check">
+                                                                    <svg width="14" height="14" aria-hidden="true">
+                                                                        <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                                    </svg>
+                                                                </span>
+                                                                Автоаксессуары и принадлежности
+                                                            </label>
+                                                        </div>
+                                                        <button class="input__filter-select__accordion-btn" type="button" aria-label="Toggle" aria-expanded="false" data-accordion_btn>
+                                                            <svg width="18" height="18" aria-hidden="true">
+                                                                <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="accordion-content input__filter-select__accordion-body" aria-hidden="true" data-accordion_content>
+                                                        <div>
+                                                            <div class="input__filter-select__accordion-item" data-accordion_panel data-search_filter_panel>
+                                                                <div class="input__filter-select__accordion-input">
+                                                                    <input class="input__filter-select__checkbox" type="checkbox" id="category-2-2" data-search_filter_checkbox>
+                                                                    <label class="input__filter-select__label" for="category-2-2">
+                                                                        <span class="input__filter-select__check">
+                                                                            <svg width="14" height="14" aria-hidden="true">
+                                                                                <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                                            </svg>
+                                                                        </span>
+                                                                        Держатель автомобильный
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="input__filter-select__accordion-item" data-accordion_panel data-search_filter_panel>
+                                                                <div class="input__filter-select__accordion-input">
+                                                                    <input class="input__filter-select__checkbox" type="checkbox" id="category-2-3" data-search_filter_checkbox>
+                                                                    <label class="input__filter-select__label" for="category-2-3">
+                                                                        <span class="input__filter-select__check">
+                                                                            <svg width="14" height="14" aria-hidden="true">
+                                                                                <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                                            </svg>
+                                                                        </span>
+                                                                        Category
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-green" type="button">Выбрать</button>
+            </div>
+
+            <div class="search">
+                <div class="input">
+                    <div class="input__inner">
+                        <input class="input__text-input" type="text" placeholder="Поиск">
+                    </div>
+                </div>
+                <button class="btn btn-green" type="button">
+                    <svg width="18" height="18" aria-hidden="true">
+                        <use href="images/symbol/svg/sprite.symbol.svg#search"></use>
+                    </svg>
+                    Поиск
+                </button>
+            </div>
+        </div>
+
+        <div class="filter__secondary-actions">
+            <div class="dropdown hidden" data-checked_items_actions>
+                <template>
+                    <div class="dropdown__menu">
+                        <a class="dropdown__menu__link" href="#">Скачать xls</a>
+                        <a class="dropdown__menu__link" href="#">Передать в Мего для заполнения</a>
+                        <div class="dropdown__menu__hr"></div>
+                        <a class="dropdown__menu__link" href="#">Удалить</a>
+                    </div>
+                </template>
+                <button class="btn" type="button" data-dropdown_trigger>
+                    С отмеченными <span data-checked_items_counter></span>
+                    <svg width="18" height="18" aria-hidden="true">
+                        <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-scrollable">
+        <table class="table table_last-column-sticky" cellspacing="0" cellpadding="0" data-filtered_table>
+            <thead>
+                <tr>
+                    <th class="table__checkbox-cell">
+                        <label class="input-checkbox__label">
+                            <input type="checkbox" class="input-checkbox" data-filtered_table_check_all>
+                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                <svg class="icon icon_check" width="14" height="14" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                </svg>
+                                <svg class="icon icon_minus" width="14" height="14" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#minus"></use>
+                                </svg>
+                            </span>
+                        </label>
+                    </th>
+                    <th>Артикул</th>
+                    <th>Фото</th>
+                    <th class="table__title-cell">Название товара</th>
+                    <th class="table__text-right">Розничная цена</th>
+                    <th class="table__text-right">Промо цена</th>
+                    <th class="table__text-right">Кол-во&nbsp;товара на&nbsp;моих&nbsp;складах</th>
+                    <th>Дата создания</th>
+                    <th>Штрих код</th>
+                    <th class="table__text-right">Рейтинг</th>
+                    <th class="table__text-right">Продажи</th>
+                    <th>Статус</th>
+                    <th>Комментарий</th>
+                    <th class="table__text-right">Комиссии за&nbsp;услуги</th>
+                    <th>МЦК</th>
+                    <th>Ставка НДС</th>
+                    <th>
+                        <div class="dropdown">
+                            <template>
+                                <div class="dropdown__menu">
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox" checked="checked">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Артикул</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox" checked="checked">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Фото</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox" checked="checked">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Название товара</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Закупочная цена</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Розничная цена</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Промо цена</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">МЦК</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Ставка НДС</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Кол-во товара на моих складах</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Продажи</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Статус</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Дата создания</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Штрих код</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Рейтинг</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Комиссии за услуги</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+
+                                    <div class="dropdown__menu__input">
+                                        <label class="input-checkbox__label">
+                                            <input type="checkbox" class="input-checkbox">
+                                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="input-checkbox__value input-checkbox__value_sm">Комментарий</span>
+                                        </label>
+                                        <input class="input__text-input input__text-input_sm" type="text" placeholder="Порядок">
+                                    </div>
+                                    <div class="dropdown__menu__footer">
+                                        <button class="btn btn_sm btn-green" type="button">Применить</button>
+                                    </div>
+                                </div>
+                            </template>
+                            <button class="btn btn_sm btn_ico btn_transparent" type="button" aria-label="Configure" data-dropdown_trigger>
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#sliders"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="table__checkbox-cell">
+                        <label class="input-checkbox__label">
+                            <input type="checkbox" class="input-checkbox" data-filtered_table_item_check>
+                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                </svg>
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        <div class="table__primary-text">2034509230</div>
+                        <div class="table__secondary-text">(0000234534345223)</div>
+                    </td>
+                    <td>
+                        <img class="table__product-img" srcset="https://picsum.photos/38, https://picsum.photos/76 2x" src="https://picsum.photos/38" width="38" height="38" alt="" loading="lazy">
+                    </td>
+                    <td>
+                        <div class="table__primary-text"><a href="#">Смартфон последней модели</a></div>
+                        <div class="table__secondary-text">(Смартфон последней модели продавца)</div>
+                    </td>
+                    <td class="table__text-right table__nowrap-cell">5100 MDL</td>
+                    <td class="table__text-right table__nowrap-cell">4500 MDL</td>
+                    <td class="table__text-right">2508</td>
+                    <td>24.02.2024</td>
+                    <td data-tippy-content="093453413456, 093453413456, 093453413456, 093453413456">
+                        <span class="table__fake-link">093453413456</span>
+                    </td>
+                    <td class="table__text-right">5.0</td>
+                    <td class="table__text-right">346</td>
+                    <td>
+                        <span class="badge badge_sm badge_gray">Не описан</span>
+                    </td>
+                    <td data-tippy-content="Lacus consectetur sollicitudin lorem lectus. At a mattis nam orci amet elementum. Velit sapien at tellus in neque nulla ultricies.">
+                        <span class="table__comment">
+                            <svg width="18" height="18" aria-hidden="true">
+                                <use href="images/symbol/svg/sprite.symbol.svg#alert-circle"></use>
+                            </svg>
+                        </span>
+                    </td>
+                    <td class="table__text-right table__nowrap-cell" data-tippy_content_html>
+                        <template>
+                            <table class="tooltip-table" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Комиссия за продажу на Мего</th>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Логистика</th>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Эквайринг</th>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Продажа в кредит</th>
+                                        <td>3%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </template>
+                        <span class="table__fake-link">200 - 1400 MDL</span>
+                    </td>
+                    <td>?</td>
+                    <td>?</td>
+                    <td>
+                        <div class="dropdown">
+                            <template>
+                                <div class="dropdown__menu">
+                                    <a class="dropdown__menu__link" href="#">Редактировать товар</a>
+                                    <a class="dropdown__menu__link" href="#">Создать уцененный товар</a>
+                                    <a class="dropdown__menu__link" href="#">Описать товар</a>
+                                    <a class="dropdown__menu__link" href="#">Передать в Мего для заполнения карточки</a>
+                                    <div class="dropdown__menu__hr"></div>
+                                    <a class="dropdown__menu__link" href="#">Удалить</a>
+                                </div>
+                            </template>
+                            <button class="btn btn_sm btn_ico btn_transparent" type="button" aria-label="More" data-dropdown_trigger>
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#more-vertical"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="table__checkbox-cell">
+                        <label class="input-checkbox__label">
+                            <input type="checkbox" class="input-checkbox" data-filtered_table_item_check>
+                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                </svg>
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        <div class="table__primary-text">2034509230</div>
+                        <div class="table__secondary-text">(0000234534345223)</div>
+                    </td>
+                    <td>
+                        <img class="table__product-img" srcset="https://picsum.photos/38, https://picsum.photos/76 2x" src="https://picsum.photos/38" width="38" height="38" alt="" loading="lazy">
+                    </td>
+                    <td>
+                        <div class="table__primary-text"><a href="#">Смартфон последней модели</a></div>
+                        <div class="table__secondary-text">(Смартфон последней модели продавца)</div>
+                    </td>
+                    <td class="table__text-right table__nowrap-cell">5100 MDL</td>
+                    <td class="table__text-right table__nowrap-cell">4500 MDL</td>
+                    <td class="table__text-right">2508</td>
+                    <td>24.02.2024</td>
+                    <td data-tippy-content="093453413456, 093453413456, 093453413456, 093453413456">
+                        <span class="table__fake-link">093453413456</span>
+                    </td>
+                    <td class="table__text-right">5.0</td>
+                    <td class="table__text-right">346</td>
+                    <td>
+                        <span class="badge badge_sm badge_primary">На описании</span>
+                    </td>
+                    <td data-tippy-content="Lacus consectetur sollicitudin lorem lectus. At a mattis nam orci amet elementum. Velit sapien at tellus in neque nulla ultricies.">
+                        <span class="table__comment">
+                            <svg width="18" height="18" aria-hidden="true">
+                                <use href="images/symbol/svg/sprite.symbol.svg#alert-circle"></use>
+                            </svg>
+                        </span>
+                    </td>
+                    <td class="table__text-right table__nowrap-cell" data-tippy_content_html>
+                        <template>
+                            <table class="tooltip-table" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Комиссия за продажу на Мего</th>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Логистика</th>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Эквайринг</th>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Продажа в кредит</th>
+                                        <td>3%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </template>
+                        <span class="table__fake-link">200 - 1400 MDL</span>
+                    </td>
+                    <td>?</td>
+                    <td>?</td>
+                    <td>
+                        <div class="dropdown">
+                            <template>
+                                <div class="dropdown__menu">
+                                    <a class="dropdown__menu__link" href="#">Редактировать товар</a>
+                                    <a class="dropdown__menu__link" href="#">Создать уцененный товар</a>
+                                    <a class="dropdown__menu__link" href="#">Описать товар</a>
+                                    <a class="dropdown__menu__link" href="#">Передать в Мего для заполнения карточки</a>
+                                    <div class="dropdown__menu__hr"></div>
+                                    <a class="dropdown__menu__link" href="#">Удалить</a>
+                                </div>
+                            </template>
+                            <button class="btn btn_sm btn_ico btn_transparent" type="button" aria-label="More" data-dropdown_trigger>
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#more-vertical"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table__checkbox-cell">
+                        <label class="input-checkbox__label">
+                            <input type="checkbox" class="input-checkbox" data-filtered_table_item_check>
+                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                </svg>
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        <div class="table__primary-text">2034509230</div>
+                        <div class="table__secondary-text">(0000234534345223)</div>
+                    </td>
+                    <td>
+                        <img class="table__product-img" srcset="https://picsum.photos/38, https://picsum.photos/76 2x" src="https://picsum.photos/38" width="38" height="38" alt="" loading="lazy">
+                    </td>
+                    <td>
+                        <div class="table__primary-text"><a href="#">Смартфон последней модели</a></div>
+                        <div class="table__secondary-text">(Смартфон последней модели продавца)</div>
+                    </td>
+                    <td class="table__text-right table__nowrap-cell">5100 MDL</td>
+                    <td class="table__text-right table__nowrap-cell">4500 MDL</td>
+                    <td class="table__text-right">2508</td>
+                    <td>24.02.2024</td>
+                    <td data-tippy-content="093453413456, 093453413456, 093453413456, 093453413456">
+                        <span class="table__fake-link">093453413456</span>
+                    </td>
+                    <td class="table__text-right">5.0</td>
+                    <td class="table__text-right">346</td>
+                    <td>
+                        <span class="badge badge_sm badge_success">В продаже</span>
+                    </td>
+                    <td data-tippy-content="Lacus consectetur sollicitudin lorem lectus. At a mattis nam orci amet elementum. Velit sapien at tellus in neque nulla ultricies.">
+                        <span class="table__comment">
+                            <svg width="18" height="18" aria-hidden="true">
+                                <use href="images/symbol/svg/sprite.symbol.svg#alert-circle"></use>
+                            </svg>
+                        </span>
+                    </td>
+                    <td class="table__text-right table__nowrap-cell" data-tippy_content_html>
+                        <template>
+                            <table class="tooltip-table" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Комиссия за продажу на Мего</th>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Логистика</th>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Эквайринг</th>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Продажа в кредит</th>
+                                        <td>3%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </template>
+                        <span class="table__fake-link">200 - 1400 MDL</span>
+                    </td>
+                    <td>?</td>
+                    <td>?</td>
+                    <td>
+                        <div class="dropdown">
+                            <template>
+                                <div class="dropdown__menu">
+                                    <a class="dropdown__menu__link" href="#">Редактировать товар</a>
+                                    <a class="dropdown__menu__link" href="#">Создать уцененный товар</a>
+                                    <a class="dropdown__menu__link" href="#">Описать товар</a>
+                                    <a class="dropdown__menu__link" href="#">Передать в Мего для заполнения карточки</a>
+                                    <div class="dropdown__menu__hr"></div>
+                                    <a class="dropdown__menu__link" href="#">Удалить</a>
+                                </div>
+                            </template>
+                            <button class="btn btn_sm btn_ico btn_transparent" type="button" aria-label="More" data-dropdown_trigger>
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#more-vertical"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table__checkbox-cell">
+                        <label class="input-checkbox__label">
+                            <input type="checkbox" class="input-checkbox" data-filtered_table_item_check>
+                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                </svg>
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        <div class="table__primary-text">2034509230</div>
+                        <div class="table__secondary-text">(0000234534345223)</div>
+                    </td>
+                    <td>
+                        <img class="table__product-img" srcset="https://picsum.photos/38, https://picsum.photos/76 2x" src="https://picsum.photos/38" width="38" height="38" alt="" loading="lazy">
+                    </td>
+                    <td>
+                        <div class="table__primary-text"><a href="#">Смартфон последней модели</a></div>
+                        <div class="table__secondary-text">(Смартфон последней модели продавца)</div>
+                    </td>
+                    <td class="table__text-right table__nowrap-cell">5100 MDL</td>
+                    <td class="table__text-right table__nowrap-cell">4500 MDL</td>
+                    <td class="table__text-right">2508</td>
+                    <td>24.02.2024</td>
+                    <td data-tippy-content="093453413456, 093453413456, 093453413456, 093453413456">
+                        <span class="table__fake-link">093453413456</span>
+                    </td>
+                    <td class="table__text-right">5.0</td>
+                    <td class="table__text-right">346</td>
+                    <td>
+                        <span class="badge badge_sm badge_warning">На модерации</span>
+                    </td>
+                    <td data-tippy-content="Lacus consectetur sollicitudin lorem lectus. At a mattis nam orci amet elementum. Velit sapien at tellus in neque nulla ultricies.">
+                        <span class="table__comment">
+                            <svg width="18" height="18" aria-hidden="true">
+                                <use href="images/symbol/svg/sprite.symbol.svg#alert-circle"></use>
+                            </svg>
+                        </span>
+                    </td>
+                    <td class="table__text-right table__nowrap-cell" data-tippy_content_html>
+                        <template>
+                            <table class="tooltip-table" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Комиссия за продажу на Мего</th>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Логистика</th>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Эквайринг</th>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Продажа в кредит</th>
+                                        <td>3%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </template>
+                        <span class="table__fake-link">200 - 1400 MDL</span>
+                    </td>
+                    <td>?</td>
+                    <td>?</td>
+                    <td>
+                        <div class="dropdown">
+                            <template>
+                                <div class="dropdown__menu">
+                                    <a class="dropdown__menu__link" href="#">Редактировать товар</a>
+                                    <a class="dropdown__menu__link" href="#">Создать уцененный товар</a>
+                                    <a class="dropdown__menu__link" href="#">Описать товар</a>
+                                    <a class="dropdown__menu__link" href="#">Передать в Мего для заполнения карточки</a>
+                                    <div class="dropdown__menu__hr"></div>
+                                    <a class="dropdown__menu__link" href="#">Удалить</a>
+                                </div>
+                            </template>
+                            <button class="btn btn_sm btn_ico btn_transparent" type="button" aria-label="More" data-dropdown_trigger>
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#more-vertical"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table__checkbox-cell">
+                        <label class="input-checkbox__label">
+                            <input type="checkbox" class="input-checkbox" data-filtered_table_item_check>
+                            <span class="input-checkbox__icon input-checkbox__icon_sm">
+                                <svg class="icon icon_14" width="14" height="14" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#check"></use>
+                                </svg>
+                            </span>
+                        </label>
+                    </td>
+                    <td>
+                        <div class="table__primary-text">2034509230</div>
+                        <div class="table__secondary-text">(0000234534345223)</div>
+                    </td>
+                    <td>
+                        <img class="table__product-img" srcset="https://picsum.photos/38, https://picsum.photos/76 2x" src="https://picsum.photos/38" width="38" height="38" alt="" loading="lazy">
+                    </td>
+                    <td>
+                        <div class="table__primary-text"><a href="#">Смартфон последней модели</a></div>
+                        <div class="table__secondary-text">(Смартфон последней модели продавца)</div>
+                    </td>
+                    <td class="table__text-right table__nowrap-cell">5100 MDL</td>
+                    <td class="table__text-right table__nowrap-cell">4500 MDL</td>
+                    <td class="table__text-right">2508</td>
+                    <td>24.02.2024</td>
+                    <td data-tippy-content="093453413456, 093453413456, 093453413456, 093453413456">
+                        <span class="table__fake-link">093453413456</span>
+                    </td>
+                    <td class="table__text-right">5.0</td>
+                    <td class="table__text-right">346</td>
+                    <td>
+                        <span class="badge badge_sm badge_error">Закончился</span>
+                    </td>
+                    <td data-tippy-content="Lacus consectetur sollicitudin lorem lectus. At a mattis nam orci amet elementum. Velit sapien at tellus in neque nulla ultricies.">
+                        <span class="table__comment">
+                            <svg width="18" height="18" aria-hidden="true">
+                                <use href="images/symbol/svg/sprite.symbol.svg#alert-circle"></use>
+                            </svg>
+                        </span>
+                    </td>
+                    <td class="table__text-right table__nowrap-cell" data-tippy_content_html>
+                        <template>
+                            <table class="tooltip-table" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Комиссия за продажу на Мего</th>
+                                        <td>20%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Логистика</th>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Эквайринг</th>
+                                        <td>3%</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Продажа в кредит</th>
+                                        <td>3%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </template>
+                        <span class="table__fake-link">200 - 1400 MDL</span>
+                    </td>
+                    <td>?</td>
+                    <td>?</td>
+                    <td>
+                        <div class="dropdown">
+                            <template>
+                                <div class="dropdown__menu">
+                                    <a class="dropdown__menu__link" href="#">Редактировать товар</a>
+                                    <a class="dropdown__menu__link" href="#">Создать уцененный товар</a>
+                                    <a class="dropdown__menu__link" href="#">Описать товар</a>
+                                    <a class="dropdown__menu__link" href="#">Передать в Мего для заполнения карточки</a>
+                                    <div class="dropdown__menu__hr"></div>
+                                    <a class="dropdown__menu__link" href="#">Удалить</a>
+                                </div>
+                            </template>
+                            <button class="btn btn_sm btn_ico btn_transparent" type="button" aria-label="More" data-dropdown_trigger>
+                                <svg width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#more-vertical"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="pagination-wrap">
+    <a href="#" class="pagination-prev-js pagination__prev">
+        <svg width="18" height="18">
+            <use href="images/symbol/svg/sprite.symbol.svg#arrow-left"></use>
+        </svg>
+    </a>
+
+    <div class="pagination select" id="pagination">
+        <div class="pagination__button select-button-js select__button">
+            <div class="pagination__button-inner">
+                <div class="select__title">Страница</div>
+                <div class="pagination__current select-current-js select__current">1</div>
+            </div>
+            <svg width="18" height="18">
+                <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+            </svg>
+        </div>
+        <div class="pagination__dropdown select-dropdown-js select__dropdown">
+            <a href="#" class="pagination__link select-link-js select__link active">1</a>
+            <a href="#" class="pagination__link select-link-js select__link">2</a>
+            <a href="#" class="pagination__link select-link-js select__link">3</a>
+            <a href="#" class="pagination__link select-link-js select__link">4</a>
+            <a href="#" class="pagination__link select-link-js select__link">5</a>
+            <a href="#" class="pagination__link select-link-js select__link">6</a>
+            <a href="#" class="pagination__link select-link-js select__link">7</a>
+            <span class="pagination__link select-link-js select__link pagination__dots">...</span>
+            <a href="#" class="pagination__link select-link-js select__link pagination__last">67</a>
+        </div>
+    </div>
+
+    <a href="#" class="pagination-next-js pagination__next">
+        <svg width="18" height="18">
+            <use href="images/symbol/svg/sprite.symbol.svg#arrow-right"></use>
+        </svg>
+    </a>
+</div>
+
+</div>
+</main>
+
+            
+            <footer class="footer"><div class="container">
+    <div class="footer__top">
+        <div class="footer__logo-wrap">
+            <a href="/" class="footer__logo">
+                <picture><source srcset="images/components/logo.webp" type="image/webp"><img src="images/components/logo.png" width="136" height="32" alt="Mego"></picture>
+            </a>
+            <span class="footer__logo-text">Seller</span>
+        </div>
+
+        <div class="footer__socials">
+            <a href="#facebook" class="facebook" target="_blank" rel="nofollow" aria-label="Facebook">
+                <svg width="24" height="25">
+                    <use href="images/symbol/svg/sprite.symbol.svg#facebook"></use>
+                </svg>
+            </a>
+
+            <a href="#instagram" class="instagram" target="_blank" rel="nofollow" aria-label="Instagram">
+                <svg width="24" height="25">
+                    <use href="images/symbol/svg/sprite.symbol.svg#instagram"></use>
+                </svg>
+            </a>
+
+            <a href="#youtube" class="youtube" target="_blank" rel="nofollow" aria-label="Youtube">
+                <svg width="24" height="25">
+                    <use href="images/symbol/svg/sprite.symbol.svg#youtube"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="footer__wrap-menu-copyright">
+            <div class="footer__menu">
+                <div class="footer__menu-item">
+                    <h3 class="active footer-menu-header-js footer__menu-header">
+                        Компания
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li>
+                                <a href="#">Стать курьером</a>
+                            </li>
+                            <li>
+                                <a href="#">Реквизиты</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#">Мобильное приложение</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Продавцам
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Стать продавцом</a>
+                            </li>
+                            <li>
+                                <a href="#">Стать поставщиком</a>
+                            </li>
+                            <li>
+                                <a href="#">Документация для партнёров</a>
+                            </li>
+                            <li>
+                                <a href="#">Партнёрская программа</a>
+                            </li>
+                            <li>
+                                <a href="#">Производителям</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Компаниям
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Добавить компанию</a>
+                            </li>
+                            <li>
+                                <a href="#">Мои компании</a>
+                            </li>
+                            <li>
+                                <a href="#">Подарочные сертификаты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Помощь
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Как выбрать товар</a>
+                            </li>
+                            <li>
+                                <a href="#">Оплата и доставка</a>
+                            </li>
+                            <li>
+                                <a href="#">Обратная связь</a>
+                            </li>
+                            <li>
+                                <a href="#">Возвраты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Помощь
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Как выбрать товар</a>
+                            </li>
+                            <li>
+                                <a href="#">Оплата и доставка</a>
+                            </li>
+                            <li>
+                                <a href="#">Обратная связь</a>
+                            </li>
+                            <li>
+                                <a href="#">Возвраты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <a href="#">&copy; 2023 «mego»</a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+
+            
+<div class="notification" id="notification">
+    <div class="notification__inner">
+        <span class="notification__text">Товар добавлен в корзину</span>
+
+        <button class="notification__close" id="notification-close" aria-label="Закрыть уведомление">
+            <svg width="18" height="18">
+                <use href="images/symbol/svg/sprite.symbol.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+
+<div class="fixed-menu">
+    <div class="container">
+        <ul>
+            <li>
+                <a href="/" class="active">
+                    <svg width="24" height="24">
+                        <use href="images/symbol/svg/sprite.symbol.svg#home"></use>
+                    </svg>
+                    Главная
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg width="24" height="24">
+                        <use href="images/symbol/svg/sprite.symbol.svg#learn"></use>
+                    </svg>
+                    База знаний
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg width="24" height="24">
+                        <use href="images/symbol/svg/sprite.symbol.svg#megaphone"></use>
+                    </svg>
+                    Новости
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="popup popup-choice-language-and-city" id="popup-choice-language-and-city">
+    <div class="popup-bg popup-bg-js"></div>
+    <div class="inner">
+        <div class="choice-language" id="choice-language">
+            <div class="popup__header">
+                <div class="title">Язык сайта</div>
+            </div>
+
+            <ul class="list">
+                <li>
+                    <a href="#" class="active" data-code="RU">Русский</a>
+                </li>
+                <li>
+                    <a href="#" data-code="RO">Română</a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="close-popup close-popup-js" aria-label="Закрыть">
+            <svg width="18" height="18">
+                <use href="images/symbol/svg/sprite.symbol.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+
+<div class="user-menu" id="user-menu">
+    <div class="user-menu__bg" id="user-menu-bg"></div>
+
+    <div class="user-menu__inner">
+        <div class="user-menu__header">
+            <div class="title">Название компании</div>
+        </div>
+
+        <div class="user-menu__content">
+            <ul class="is-authorized user-menu__list user-menu__list-desktop">
+                <li>
+                    <a href="account-main.html">
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#sliders"></use>
+                        </svg>
+                        Настройки
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="is-authorized user-menu__list user-menu__list-mobile">
+                <li>
+                    <a href="account-main.html"> Основная информация </a>
+                </li>
+                <li>
+                    <a href="account-address.html"> Адреса, контакты, реквизиты </a>
+                </li>
+                <li>
+                    <a href="account-info.html"> Информация о магазине </a>
+                </li>
+            </ul>
+
+            <ul class="is-authorized user-menu__list user-menu__list-mobile">
+                <li>
+                    <a href="account-delivery.html"> Стоимость доставки </a>
+                </li>
+                <li>
+                    <a href="account-payment.html"> Платежи и комиссии </a>
+                </li>
+                <li>
+                    <a href="account-main.html"> Заполнение карточек товара </a>
+                </li>
+                <li>
+                    <a href="account-agreement.html"> Договор </a>
+                </li>
+            </ul>
+
+            <ul class="is-authorized user-menu__list user-menu__list-mobile">
+                <li>
+                    <a href="account-main.html"> API ключи </a>
+                </li>
+            </ul>
+
+            <ul class="is-authorized user-menu__list">
+                <li>
+                    <a href="#">
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#log-out"></use>
+                        </svg>
+                        Выход
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<button class="button-to-top" id="button-to-top" aria-label="Кнопка вверх">
+    <svg width="18" height="18">
+        <use href="images/symbol/svg/sprite.symbol.svg#arrow-up"></use>
+    </svg>
+</button>
+
+
+        </div>
+
+        <script src="js/app.min.js?_v=20240417130652"></script>
+    </body>
+</html>

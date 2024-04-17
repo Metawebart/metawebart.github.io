@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20240417130652" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20240417130652" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20240417130652">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240417130652">
+    <title>Главная страница</title>
+</head>
+
+    <body class="user-is-authorized">
+        
+        
+
+        <div class="wrapper">
+            
+            <header class="header" id="header"><div class="container">
+    <div class="header__top" id="header-top">
+        <div class="header__logo-wrapper">
+            <a href="/" class="header__logo">
+                <picture><source srcset="images/components/logo.webp" type="image/webp"><img src="images/components/logo.png" width="102" height="24" alt="Mego"></picture>
+            </a>
+            <span class="header__logo-text">Seller</span>
+        </div>
+
+        <div class="header__buttons">
+            <button class="header__button open-popup-js" data-target="#popup-choice-language-and-city">
+                <svg width="18" height="18">
+                    <use href="images/symbol/svg/sprite.symbol.svg#globe"></use>
+                </svg>
+                <span>RU</span>
+            </button>
+
+            <a class="header__button header__button_show-lg" href="#">
+                <svg width="18" height="18">
+                    <use href="images/symbol/svg/sprite.symbol.svg#learn"></use>
+                </svg>
+                <span>База знаний</span>
+            </a>
+
+            <a class="header__button header__button_show-lg" href="#">
+                <svg width="18" height="18">
+                    <use href="images/symbol/svg/sprite.symbol.svg#megaphone"></use>
+                </svg>
+                <span>Новости</span>
+            </a>
+
+            <a class="header__button is-no-authorized" href="auth.html">
+                <svg width="18" height="18">
+                    <use href="images/symbol/svg/sprite.symbol.svg#user"></use>
+                </svg>
+                <span>Войти</span>
+            </a>
+
+            <button class="is-authorized header__button header__button-user open-user-menu-js">
+                <span class="icon">
+                    <svg width="18" height="18">
+                        <use href="images/symbol/svg/sprite.symbol.svg#user"></use>
+                    </svg>
+                    <span class="counter">1</span>
+                </span>
+                <span class="header__button-user-name">Константин</span>
+            </button>
+        </div>
+    </div>
+</div>
+</header>
+
+            
+            <nav class="submenu" aria-label="Личный кабинет">
+    <div class="container">
+        <div class="submenu__inner">
+            <div class="submenu__item">
+                <a class="submenu__link" href="/">Главная</a>
+            </div>
+            <div class="active submenu__item">
+                <a class="submenu__link" href="product-list.html" data-submenu_link>Товары и цены</a>
+                <template>
+                    <div class="submenu__dropdown">
+                        <a class="active submenu__dropdown__link" href="product-list.html">Список товаров</a>
+                        <a class="submenu__dropdown__link" href="create-product_information.html">Добавить один товар</a>
+                        
+                        <a class="submenu__dropdown__link" href="upload-pricelist.html">Загрузить или обновить прайс-лист (остатки и цены)</a>
+                    </div>
+                </template>
+            </div>
+            <div class="submenu__item">
+                <a class="submenu__link has-new" href="orders.html">Заказы</a>
+            </div>
+            <div class="submenu__item">
+                <a class="submenu__link" href="/">Служба поддержки</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+            <main class="page"><div class="page">
+    <div class="container">
+        <div class="account">
+            <div class="account-sidebar">
+    <ul class="account-sidebar__list">
+        <li>
+            <span href="#" class="account-sidebar__section">Компания</span>
+        </li>
+        <li>
+            <a href="account-main.html" class="active">
+                Основная информация
+                <svg class="icon icon_18 account-sidebar__alert" width="18" height="18" aria-hidden="true">
+                    <use href="images/symbol/svg/sprite.symbol.svg#alert-circle"></use>
+                </svg>
+            </a>
+        </li>
+        <li>
+            <a href="account-address.html">Адреса, контакты, реквизиты</a>
+        </li>
+        <li>
+            <a href="account-info.html">Информация о магазине</a>
+        </li>
+        <li class="account-sidebar__sep"></li>
+        <li>
+            <span href="#" class="account-sidebar__section">Условия работы</span>
+        </li>
+        <li>
+            <a href="account-delivery.html">Стоимость доставки</a>
+        </li>
+        <li>
+            <a href="account-payment.html">Платежи и комиссии</a>
+        </li>
+        <li>
+            <a href="#">Заполнение карточек товара</a>
+        </li>
+        <li>
+            <a href="account-agreement.html">Договор</a>
+        </li>
+        <li class="account-sidebar__sep"></li>
+        <li>
+            <span href="#" class="account-sidebar__section">Seller API</span>
+        </li>
+        <li>
+            <a href="#">API ключи</a>
+        </li>
+    </ul>
+</div>
+
+
+            <div class="account-content">
+                <h1 class="page-title">Настройки</h1>
+
+                <div class="account-content__inner">
+                    <div class="block">
+                        <h2 class="block-title">Договор</h2>
+                        <div class="agreement">
+                            <a class="btn btn_link" href="#" target="_blank">
+                                <svg class="icon icon_18" width="18" height="18" aria-hidden="true">
+                                    <use href="images/symbol/svg/sprite.symbol.svg#learn"></use>
+                                </svg>
+                                Условия и правила продажи на Мего
+                            </a>
+
+                            <h3 class="agreement__h3">Специальные условия для {Компания}</h3>
+
+                            <div class="table-scrollable table-scrollable_vertically" style="max-height: 396px">
+                                <table class="table" cellspacing="0" cellpadding="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Параметр</th>
+                                            <th>Параметр</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Значение</td>
+                                            <td>Значение</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Значение</td>
+                                            <td>Значение</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Значение</td>
+                                            <td>Значение</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Значение</td>
+                                            <td>Значение</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Значение</td>
+                                            <td>Значение</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Значение</td>
+                                            <td>Значение</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Значение</td>
+                                            <td>Значение</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Значение</td>
+                                            <td>Значение</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Значение</td>
+                                            <td>Значение</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Значение</td>
+                                            <td>Значение</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Значение</td>
+                                            <td>Значение</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Значение</td>
+                                            <td>Значение</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="form-actions form-actions_mt48">
+                                <button class="btn open-popup-js" type="button" data-target="#agreement-termination">
+                                    Расторжение договора
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup popup_md" id="agreement-termination">
+    <div class="popup-bg popup-bg-js"></div>
+    <div class="inner">
+        <div class="popup__header">
+            <div class="title">Расторжение договора</div>
+            <div class="popup__subtitle">
+                Donec varius mus dui aliquet habitant pharetra ut vel. Risus diam tempus id sit pharetra. Magnis proin
+                nisl at augue donec congue. Tortor faucibus suscipit nibh hendrerit non posuere semper diam. Scelerisque
+                felis augue magna fermentum.
+            </div>
+        </div>
+
+        <form action="">
+            <div class="form-group">
+                <textarea class="form-input form-textarea" placeholder="Текст"></textarea>
+            </div>
+
+            <div class="popup__footer">
+                <button class="btn btn-green" type="submit">Отправить</button>
+            </div>
+        </form>
+
+        <button class="close-popup close-popup-js" aria-label="Закрыть" type="button">
+            <svg width="18" height="18">
+                <use href="images/symbol/svg/sprite.symbol.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+</main>
+
+            
+            <footer class="footer"><div class="container">
+    <div class="footer__top">
+        <div class="footer__logo-wrap">
+            <a href="/" class="footer__logo">
+                <picture><source srcset="images/components/logo.webp" type="image/webp"><img src="images/components/logo.png" width="136" height="32" alt="Mego"></picture>
+            </a>
+            <span class="footer__logo-text">Seller</span>
+        </div>
+
+        <div class="footer__socials">
+            <a href="#facebook" class="facebook" target="_blank" rel="nofollow" aria-label="Facebook">
+                <svg width="24" height="25">
+                    <use href="images/symbol/svg/sprite.symbol.svg#facebook"></use>
+                </svg>
+            </a>
+
+            <a href="#instagram" class="instagram" target="_blank" rel="nofollow" aria-label="Instagram">
+                <svg width="24" height="25">
+                    <use href="images/symbol/svg/sprite.symbol.svg#instagram"></use>
+                </svg>
+            </a>
+
+            <a href="#youtube" class="youtube" target="_blank" rel="nofollow" aria-label="Youtube">
+                <svg width="24" height="25">
+                    <use href="images/symbol/svg/sprite.symbol.svg#youtube"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="footer__wrap-menu-copyright">
+            <div class="footer__menu">
+                <div class="footer__menu-item">
+                    <h3 class="active footer-menu-header-js footer__menu-header">
+                        Компания
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">О нас</a>
+                            </li>
+                            <li>
+                                <a href="#">Вакансии</a>
+                            </li>
+                            <li>
+                                <a href="#">Стать курьером</a>
+                            </li>
+                            <li>
+                                <a href="#">Реквизиты</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                            <li>
+                                <a href="#">Мобильное приложение</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Продавцам
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Стать продавцом</a>
+                            </li>
+                            <li>
+                                <a href="#">Стать поставщиком</a>
+                            </li>
+                            <li>
+                                <a href="#">Документация для партнёров</a>
+                            </li>
+                            <li>
+                                <a href="#">Партнёрская программа</a>
+                            </li>
+                            <li>
+                                <a href="#">Производителям</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Компаниям
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Добавить компанию</a>
+                            </li>
+                            <li>
+                                <a href="#">Мои компании</a>
+                            </li>
+                            <li>
+                                <a href="#">Подарочные сертификаты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Помощь
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Как выбрать товар</a>
+                            </li>
+                            <li>
+                                <a href="#">Оплата и доставка</a>
+                            </li>
+                            <li>
+                                <a href="#">Обратная связь</a>
+                            </li>
+                            <li>
+                                <a href="#">Возвраты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__menu-item">
+                    <h3 class="footer-menu-header-js footer__menu-header">
+                        Помощь
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#chevron-down-small"></use>
+                        </svg>
+                    </h3>
+
+                    <nav class="footer-menu-list-js footer__menu-list">
+                        <ul>
+                            <li>
+                                <a href="#">Как выбрать товар</a>
+                            </li>
+                            <li>
+                                <a href="#">Оплата и доставка</a>
+                            </li>
+                            <li>
+                                <a href="#">Обратная связь</a>
+                            </li>
+                            <li>
+                                <a href="#">Возвраты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="footer__copyright">
+                <a href="#">&copy; 2023 «mego»</a>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+
+            
+<div class="notification" id="notification">
+    <div class="notification__inner">
+        <span class="notification__text">Товар добавлен в корзину</span>
+
+        <button class="notification__close" id="notification-close" aria-label="Закрыть уведомление">
+            <svg width="18" height="18">
+                <use href="images/symbol/svg/sprite.symbol.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+
+<div class="fixed-menu">
+    <div class="container">
+        <ul>
+            <li>
+                <a href="/" class="active">
+                    <svg width="24" height="24">
+                        <use href="images/symbol/svg/sprite.symbol.svg#home"></use>
+                    </svg>
+                    Главная
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg width="24" height="24">
+                        <use href="images/symbol/svg/sprite.symbol.svg#learn"></use>
+                    </svg>
+                    База знаний
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg width="24" height="24">
+                        <use href="images/symbol/svg/sprite.symbol.svg#megaphone"></use>
+                    </svg>
+                    Новости
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="popup popup-choice-language-and-city" id="popup-choice-language-and-city">
+    <div class="popup-bg popup-bg-js"></div>
+    <div class="inner">
+        <div class="choice-language" id="choice-language">
+            <div class="popup__header">
+                <div class="title">Язык сайта</div>
+            </div>
+
+            <ul class="list">
+                <li>
+                    <a href="#" class="active" data-code="RU">Русский</a>
+                </li>
+                <li>
+                    <a href="#" data-code="RO">Română</a>
+                </li>
+            </ul>
+        </div>
+
+        <button class="close-popup close-popup-js" aria-label="Закрыть">
+            <svg width="18" height="18">
+                <use href="images/symbol/svg/sprite.symbol.svg#close"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+
+
+
+<div class="user-menu" id="user-menu">
+    <div class="user-menu__bg" id="user-menu-bg"></div>
+
+    <div class="user-menu__inner">
+        <div class="user-menu__header">
+            <div class="title">Название компании</div>
+        </div>
+
+        <div class="user-menu__content">
+            <ul class="is-authorized user-menu__list user-menu__list-desktop">
+                <li>
+                    <a href="account-main.html">
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#sliders"></use>
+                        </svg>
+                        Настройки
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="is-authorized user-menu__list user-menu__list-mobile">
+                <li>
+                    <a href="account-main.html"> Основная информация </a>
+                </li>
+                <li>
+                    <a href="account-address.html"> Адреса, контакты, реквизиты </a>
+                </li>
+                <li>
+                    <a href="account-info.html"> Информация о магазине </a>
+                </li>
+            </ul>
+
+            <ul class="is-authorized user-menu__list user-menu__list-mobile">
+                <li>
+                    <a href="account-delivery.html"> Стоимость доставки </a>
+                </li>
+                <li>
+                    <a href="account-payment.html"> Платежи и комиссии </a>
+                </li>
+                <li>
+                    <a href="account-main.html"> Заполнение карточек товара </a>
+                </li>
+                <li>
+                    <a href="account-agreement.html"> Договор </a>
+                </li>
+            </ul>
+
+            <ul class="is-authorized user-menu__list user-menu__list-mobile">
+                <li>
+                    <a href="account-main.html"> API ключи </a>
+                </li>
+            </ul>
+
+            <ul class="is-authorized user-menu__list">
+                <li>
+                    <a href="#">
+                        <svg width="18" height="18">
+                            <use href="images/symbol/svg/sprite.symbol.svg#log-out"></use>
+                        </svg>
+                        Выход
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<button class="button-to-top" id="button-to-top" aria-label="Кнопка вверх">
+    <svg width="18" height="18">
+        <use href="images/symbol/svg/sprite.symbol.svg#arrow-up"></use>
+    </svg>
+</button>
+
+
+        </div>
+        
+        <script src="js/app.min.js?_v=20240417130652"></script>
+    </body>
+</html>
