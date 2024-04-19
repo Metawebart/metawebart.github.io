@@ -7,10 +7,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20240417130652" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20240417130652" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20240417130652">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240417130652">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20240419091558" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20240419091558" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20240419091558">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240419091558">
     <title>Главная страница</title>
 </head>
 
@@ -158,11 +158,18 @@
                         <div class="block">
                             <h2 class="block-title">Информация и реквизиты</h2>
 
-                            <div class="form-group">
-                                <textarea class="form-input form-textarea" placeholder="Адрес основного склада отгрузки товара"></textarea>
+                            <div class="input">
+                                <div class="input__inner">
+                                    <label class="input__label" for="main-address">
+                                        Адрес основного склада отгрузки товара
+                                        <span class="input__required-mark">*</span>
+                                    </label>
+                                    <textarea id="main-address" class="form-input-required-js form-textarea input__textarea" maxlength="250" rows="4"></textarea>
+                                </div>
+                                <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
 
-                            <div class="hours" data-time_container>
+                            <div class="hours file-input-parent" data-time_container>
                                 <template data-time_input_dropdown>
                                     <div class="hours__dropdown">
                                         <div class="hours__dropdown__column hours__dropdown__column_hours">
@@ -283,13 +290,16 @@
                                         </div>
                                     </div>
                                 </template>
-                                <h3 class="h3 hours__title">Время работы основного склада</h3>
+                                <h3 class="h3 hours__title">
+                                    Время работы основного склада <span class="input__required-mark">*</span>
+                                </h3>
+                                <span class="error-empty error-text">Это обязательное поле</span>
                                 <div class="hours__inner">
                                     <div class="hours__day">
                                         <label class="hours__day__name">Пн</label>
                                         <div class="input">
                                             <div class="input__inner">
-                                                <input class="input__text-input" type="text" placeholder="Начало" data-time_input>
+                                                <input class="input__text-input form-input-file-required-js" type="text" placeholder="Начало" data-time_input>
                                             </div>
                                         </div>
                                         <div class="input">
@@ -468,7 +478,7 @@
                             </div>
 
                             <div class="form-group">
-                                <textarea class="form-input form-textarea" placeholder="Адрес дополнительного склада отгрузки товара" disabled="disabled"></textarea>
+                                <textarea class="form-textarea form-input" placeholder="Адрес дополнительного склада отгрузки товара" disabled="disabled"></textarea>
                             </div>
 
                             <div class="hours" data-time_container>
@@ -778,49 +788,66 @@
 
                             <div class="input">
                                 <div class="input__inner">
-                                    <input class="input__text-input" id="phone" type="tel" name="phone" placeholder="Телефон ответственного лица">
+                                    <label class="input__label" for="phone">
+                                        Телефон ответственного лица
+                                        <span class="input__required-mark">*</span>
+                                    </label>
+                                    <input class="input__text-input form-input-required-js" id="phone" type="tel" name="phone">
                                 </div>
                                 <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
 
                             <div class="input">
                                 <div class="input__inner">
-                                    <input class="input__text-input" id="email" type="email" name="email" placeholder="Email ответственного лица">
+                                    <label class="input__label" for="email">
+                                        Email ответственного лица
+                                        <span class="input__required-mark">*</span>
+                                    </label>
+                                    <input class="input__text-input form-input-required-js" id="email" type="email" name="email">
                                 </div>
                                 <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
 
                             <div class="input">
                                 <div class="input__inner">
-                                    <input class="input__text-input" id="phone-buh" type="tel" name="phone-buh" placeholder="Телефон бухгалтерии">
+                                    <label class="input__label" for="phone-buh"> Телефон бухгалтерии </label>
+                                    <input class="input__text-input" id="phone-buh" type="tel" name="phone-buh">
+                                </div>
+                            </div>
+
+                            <div class="input">
+                                <div class="input__inner">
+                                    <label class="input__label" for="email-buh"> Email бухгалтерии </label>
+                                    <input class="input__text-input" id="email-buh" type="email" name="email-buh">
+                                </div>
+                            </div>
+
+                            <div class="input">
+                                <div class="input__inner">
+                                    <label class="input__label" for="phone-storage">
+                                        Телефон основного склада
+                                        <span class="input__required-mark">*</span>
+                                    </label>
+                                    <input class="input__text-input form-input-required-js" id="phone-storage" type="tel" name="phone-storage">
                                 </div>
                                 <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
 
                             <div class="input">
                                 <div class="input__inner">
-                                    <input class="input__text-input" id="email-buh" type="email" name="email-buh" placeholder="Email бухгалтерии">
+                                    <label class="input__label" for="phone-storage-2">
+                                        Телефон дополнительного склада
+                                    </label>
+                                    <input class="input__text-input" id="phone-storage-2" type="tel" name="phone-storage-2">
                                 </div>
-                                <span class="error-empty error-text">Это обязательное поле</span>
-                            </div>
-
-                            <div class="input">
-                                <div class="input__inner">
-                                    <input class="input__text-input" id="phone-storage" type="tel" name="phone-storage" placeholder="Телефон основного склада">
-                                </div>
-                                <span class="error-empty error-text">Это обязательное поле</span>
-                            </div>
-
-                            <div class="input">
-                                <div class="input__inner">
-                                    <input class="input__text-input" id="phone-storage-2" type="tel" name="phone-storage-2" placeholder="Телефон дополнительного склада">
-                                </div>
-                                <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
                         </div>
 
-                        <div class="block">
-                            <div class="block-title">Документы о регистрации</div>
+                        <div class="block file-input-parent">
+                            <div class="block-title">
+                                Документы о регистрации <span class="input__required-mark">*</span>
+                            </div>
+                            <span class="error-empty error-text">Это обязательное поле</span>
                             <div class="dnd" data-dnd>
                                 <div class="dnd__form" data-dnd_droparea>
                                     <svg class="icon icon_24" width="24" height="24" aria-hidden="true">
@@ -831,7 +858,7 @@
                                         файлы в эту область
                                     </div>
                                     <div class="dnd__subtitle">Формат —  jpg, pdf, doc, docx, png</div>
-                                    <input class="dnd__input" type="file" id="fileElem" multiple="multiple" data-dnd_files>
+                                    <input class="form-input-file-required-js dnd__input" type="file" id="fileElem" multiple="multiple" data-dnd_files>
                                 </div>
 
                                 <div class="dnd__files-container" data-dnd_file_list></div>
@@ -866,28 +893,40 @@
                             <div class="block-title">Платежные реквизиты</div>
                             <div class="input">
                                 <div class="input__inner">
-                                    <input class="input__text-input" id="bank" type="text" name="bank" placeholder="Банк">
+                                    <label class="input__label" for="bank">
+                                        Банк <span class="input__required-mark">*</span>
+                                    </label>
+                                    <input class="input__text-input form-input-required-js" id="bank" type="text" name="bank">
                                 </div>
                                 <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
 
                             <div class="input">
                                 <div class="input__inner">
-                                    <input class="input__text-input" id="f-code" type="text" name="f-code" placeholder="Фискальный код">
+                                    <label class="input__label" for="f-code">
+                                        Фискальный код <span class="input__required-mark">*</span>
+                                    </label>
+                                    <input class="input__text-input form-input-required-js" id="f-code" type="number" name="f-code" maxlength="13" minlength="13">
                                 </div>
                                 <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
 
                             <div class="input">
                                 <div class="input__inner">
-                                    <input class="input__text-input" id="iban" type="text" name="iban" placeholder="IBAN">
+                                    <label class="input__label" for="iban">
+                                        IBAN <span class="input__required-mark">*</span>
+                                    </label>
+                                    <input class="input__text-input form-input-required-js" id="iban" type="text" name="iban" minlength="24">
                                 </div>
                                 <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
 
                             <div class="input">
                                 <div class="input__inner">
-                                    <input class="input__text-input" id="bank-code" type="text" name="bank-code" placeholder="Код банка">
+                                    <label class="input__label" for="bank-code">
+                                        Код банка <span class="input__required-mark">*</span>
+                                    </label>
+                                    <input class="input__text-input form-input-required-js" id="bank-code" type="text" name="bank-code">
                                 </div>
                                 <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
@@ -895,7 +934,10 @@
                             <div class="account__form-row">
                                 <div class="input">
                                     <div class="input__inner">
-                                        <input class="input__text-input" id="nds" type="text" name="nds" placeholder="Код НДС">
+                                        <label class="input__label" for="nds">
+                                            Код НДС <span class="input__required-mark">*</span>
+                                        </label>
+                                        <input class="input__text-input form-input-required-js" id="nds" type="number" name="nds" maxlength="7" minlength="7">
                                     </div>
                                     <span class="error-empty error-text">Это обязательное поле</span>
                                 </div>
@@ -1258,6 +1300,6 @@
 
         </div>
         
-        <script src="js/app.min.js?_v=20240417130652"></script>
+        <script src="js/app.min.js?_v=20240419091558"></script>
     </body>
 </html>

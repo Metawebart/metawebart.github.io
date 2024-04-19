@@ -34896,6 +34896,7 @@ var inputEmail = jquery('.form-input-email-js');
 var phonePattern = /^(\+)?[\d\s\(\)\-]+$/;
 var additionalPhonePattern = /^(\+)?[\d\s\(\)\-]*$/;
 var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+var inputFileRequired = jquery('.form-input-file-required-js');
 jquery('input[type=number]').on('input', function (event) {
   this.value = this.value.replace(/e/gi, '');
 });
@@ -34909,6 +34910,18 @@ inputRequired.on('input blur', function () {
   } else {
     jquery(this).removeClass('error-empty');
     jquery(this).parent().removeClass('has-error');
+    jquery(this).addClass('valid');
+  }
+});
+inputFileRequired.on('input blur', function () {
+  var inputVal = jquery(this).val();
+  if (inputVal === '') {
+    jquery(this).addClass('error-empty');
+    jquery(this).closest('.file-input-parent').addClass('has-error');
+    jquery(this).removeClass('valid error-phone error-email error-repeat-password error-length-password');
+  } else {
+    jquery(this).removeClass('error-empty');
+    jquery(this).closest('.file-input-parent').removeClass('has-error');
     jquery(this).addClass('valid');
   }
 });
@@ -39753,7 +39766,11 @@ tippy_esm('[data-tippy_content_html]', {
   },
   allowHTML: true,
   arrow: false,
-  theme: 'dropdown'
+  theme: 'dropdown',
+  interactive: true,
+  appendTo: function appendTo() {
+    return document.body;
+  }
 });
 // EXTERNAL MODULE: ./node_modules/select2/dist/js/select2.js
 var select2 = __webpack_require__(686);

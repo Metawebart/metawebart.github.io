@@ -7,10 +7,10 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20240417130652" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20240417130652" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20240417130652">
-    <link rel="stylesheet" href="css/style.min.css?_v=20240417130652">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap&_v=20240419091558" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap&_v=20240419091558" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20240419091558">
+    <link rel="stylesheet" href="css/style.min.css?_v=20240419091558">
     <title>Главная страница</title>
 </head>
 
@@ -159,16 +159,20 @@
                             <h2 class="block-title">Информация о магазине</h2>
                             <div class="input">
                                 <div class="input__inner">
-                                    <input class="input__text-input" id="shop-name" type="text" name="shop-name" placeholder="Наименование магазина">
+                                    <label class="input__label" for="shop-name">
+                                        Наименование магазина <span class="input__required-mark">*</span>
+                                    </label>
+                                    <input class="form-input-required-js input__text-input" id="shop-name" type="text" name="shop-name">
                                 </div>
                                 <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
 
-                            <div class="image-file-input">
-                                <label class="image-file-input__title" for="image-file">Логотип магазина</label>
+                            <div class="file-input-parent image-file-input">
+                                <label class="image-file-input__title" for="image-file">Логотип магазина <span class="input__required-mark">*</span></label>
+                                <span class="error-empty error-text">Это обязательное поле</span>
                                 <div class="image-file-input__slot" data-image_input_slot data-image_input_slot_filled="false">
                                     <label class="image-file-input__label">
-                                        <input class="image-file-input__input" type="file" id="image-file" data-image_input>
+                                        <input class="form-input-file-required-js image-file-input__input" type="file" id="image-file" data-image_input>
                                     </label>
                                     <svg class="media-input__file__placeholder-ico" width="18" height="18" aria-hidden="true">
                                         <use href="images/symbol/svg/sprite.symbol.svg#camera"></use>
@@ -188,20 +192,48 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <textarea class="form-input form-textarea" placeholder="Краткая информация о магазине на румынском"></textarea>
+                            <div class="input">
+                                <div class="input__inner">
+                                    <label class="input__label" for="short-desc-ro">
+                                        Краткая информация о магазине на румынском
+                                        <span class="input__required-mark">*</span>
+                                    </label>
+                                    <textarea id="short-desc-ro" class="form-input-required-js form-textarea input__textarea" maxlength="250" rows="6"></textarea>
+                                </div>
+                                <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
 
-                            <div class="form-group">
-                                <textarea class="form-input form-textarea" placeholder="Краткая информация о магазине на русском"></textarea>
+                            <div class="input">
+                                <div class="input__inner">
+                                    <label class="input__label" for="short-desc-ru">
+                                        Краткая информация о магазине на русском
+                                        <span class="input__required-mark">*</span>
+                                    </label>
+                                    <textarea id="short-desc-ru" class="form-input-required-js form-textarea input__textarea" maxlength="250" rows="6"></textarea>
+                                </div>
+                                <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
 
-                            <div class="form-group">
-                                <textarea class="form-input form-textarea" placeholder="Полная информация о магазине на румынском"></textarea>
+                            <div class="input">
+                                <div class="input__inner">
+                                    <label class="input__label" for="full-desc-ro">
+                                        Полная информация о магазине на румынском
+                                        <span class="input__required-mark">*</span>
+                                    </label>
+                                    <textarea id="full-desc-ro" class="form-input-required-js form-textarea input__textarea" rows="6"></textarea>
+                                </div>
+                                <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
 
-                            <div class="form-group">
-                                <textarea class="form-input form-textarea" placeholder="Полная информация о магазине на русском"></textarea>
+                            <div class="input">
+                                <div class="input__inner">
+                                    <label class="input__label" for="full-desc-ru">
+                                        Полная информация о магазине на русском
+                                        <span class="input__required-mark">*</span>
+                                    </label>
+                                    <textarea id="full-desc-ru" class="form-input-required-js form-textarea input__textarea" rows="6"></textarea>
+                                </div>
+                                <span class="error-empty error-text">Это обязательное поле</span>
                             </div>
                         </div>
 
@@ -549,6 +581,6 @@
 
         </div>
         
-        <script src="js/app.min.js?_v=20240417130652"></script>
+        <script src="js/app.min.js?_v=20240419091558"></script>
     </body>
 </html>
